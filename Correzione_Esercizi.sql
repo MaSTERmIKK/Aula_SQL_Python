@@ -21,3 +21,14 @@ SELECT Continent,
 FROM world.country
 GROUP BY Continent
 ORDER BY PopolazioneTotale DESC;
+
+
+--ES 4
+
+SELECT CountryCode,
+       COUNT(*) AS NumeroCitta,
+       SUM(Population) AS PopolazioneTotale
+FROM world.city
+WHERE Population > 500000
+GROUP BY CountryCode
+ORDER BY NumeroCitta DESC;
