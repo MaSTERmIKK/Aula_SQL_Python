@@ -1,7 +1,7 @@
 -- Conta quante città del database world hanno una popolazione compresa tra 500.000 e 1.000.000 di abitanti e mostra solo quelle appartenenti all’Italia in ordine ascendente.
 
 SELECT COUNT(*)
-FROM city
+FROM world.city
 WHERE Population BETWEEN 500000 AND 1000000
 AND CountryCode = 'ITA'
 ORDER BY Population ASC;
