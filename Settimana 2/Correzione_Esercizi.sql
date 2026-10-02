@@ -20,62 +20,14 @@ CREATE TABLE Libri (
 -- 1) Inserimento dati (INSERT INTO)
 -- Inserire almeno 6 nuovi libri con generi e autori diversi, pubblicati in anni differenti
 INSERT INTO
-    Libri (
-        id,
-        titolo,
-        autore,
-        genere,
-        prezzo,
-        anno_pubblicazione
-    )
-VALUES (
-        1,
-        'Il Nome della Rosa',
-        'Umberto Eco',
-        'Giallo',
-        16.50,
-        1980
-    ),
-    (
-        2,
-        '1984',
-        'George Orwell',
-        'Fantascienza',
-        12.00,
-        1949
-    ),
-    (
-        3,
-        'Il Signore degli Anelli',
-        'J.R.R. Tolkien',
-        'Fantasy',
-        25.00,
-        1954
-    ),
-    (
-        4,
-        'La ragazza del treno',
-        'Paula Hawkins',
-        'Giallo',
-        13.00,
-        2015
-    ),
-    (
-        5,
-        'Sottomissione',
-        'Michel Houellebecq',
-        'Narrativa',
-        15.00,
-        2015
-    ),
-    (
-        6,
-        'Il Problema dei Tre Corpi',
-        'Liu Cixin',
-        'Fantascienza',
-        14.50,
-        2016
-    );
+    Libri (id, titolo, autore, genere, prezzo, anno_pubblicazione)
+VALUES (1, 'Il Nome della Rosa', 'Umberto Eco', 'Giallo', 16.50, 1980),
+    (2, '1984', 'George Orwell', 'Fantascienza', 12.00, 1949),
+    (3, 'Il Signore degli Anelli', 'J.R.R. Tolkien', 'Fantasy', 25.00, 1954),
+    (4, 'La ragazza del treno', 'Paula Hawkins', 'Giallo', 13.00, 2015),
+    (5, 'Sottomissione', 'Michel Houellebecq', 'Narrativa', 15.00, 2015),
+    (6, 'Il Problema dei Tre Corpi', 'Liu Cixin', 'Fantascienza', 14.50, 2016);
+
 -- 2) Aggregazione e raggruppamento (GROUP BY)
 -- Mostrare per ogni genere: numero totale libri e prezzo medio, ordinato per genere ASC
 SELECT
@@ -123,152 +75,27 @@ Vendite (
 
 --20 elementi
 INSERT INTO
-    Vendite (
-        id,
-        prodotto,
-        categoria,
-        quantita,
-        prezzo_unitario,
-        data_vendita
-    )
-VALUES (
-        1,
-        'Il Nome della Rosa',
-        'Giallo',
-        16.50,
-        1980
-    ),
-    (
-        2,
-        '1984',
-        'Fantascienza',
-        12.00,
-        1949
-    ),
-    (
-        3,
-        'Il Signore degli Anelli',
-        'Fantasy',
-        25.00,
-        1954
-    ),
-    (
-        4,
-        'La ragazza del treno',
-        'Giallo',
-        13.00,
-        2015
-    ),
-    (
-        5,
-        'Sottomissione',
-        'Narrativa',
-        15.00,
-        2015
-    ),
-    (
-        6,
-        'Il Problema dei Tre Corpi',
-        'Fantascienza',
-        14.50,
-        2016
-    ) (
-        7,
-        'Il Nome della Rosa',
-        'Giallo',
-        16.50,
-        1980
-    ),
-    (
-        8,
-        '1984',
-        'Fantascienza',
-        12.00,
-        1949
-    ),
-    (
-        9,
-        'Il Signore degli Anelli',
-        'Fantasy',
-        25.00,
-        1954
-    ),
-    (
-        10,
-        'La ragazza del treno',
-        'Giallo',
-        13.00,
-        2015
-    ),
-    (
-        11,
-        'Sottomissione',
-        'Narrativa',
-        15.00,
-        2015
-    ),
-    (
-        12,
-        'Il Problema dei Tre Corpi',
-        'Fantascienza',
-        14.50,
-        2016
-    ) (
-        13,
-        'Il Nome della Rosa',
-        'Giallo',
-        16.50,
-        1980
-    ),
-    (
-        14,
-        '1984',
-        'Fantascienza',
-        12.00,
-        1949
-    ),
-    (
-        15,
-        'Il Signore degli Anelli',
-        'Fantasy',
-        25.00,
-        1954
-    ),
-    (
-        16,
-        'La ragazza del treno',
-        'Giallo',
-        13.00,
-        2015
-    ),
-    (
-        17,
-        'Sottomissione',
-        'Narrativa',
-        15.00,
-        2015
-    ),
-    (
-        18,
-        'Il Problema dei Tre Corpi',
-        'Fantascienza',
-        14.50,
-        2016
-    ) (
-        19,
-        'Il Nome della Rosa',
-        'Giallo',
-        16.50,
-        1980
-    ),
-    (
-        20,
-        '1984',
-        'Fantascienza',
-        12.00,
-        1949
-    );
-
+    Vendite (id, prodotto, categoria, quantita, prezzo_unitario, data_vendita)
+VALUES (1, 'Laptop Pro 15', 'Elettronica', 2, 1299.99, '2024-01-10'),
+    (2, 'Mouse Wireless', 'Accessori', 5, 24.50, '2024-01-12'),
+    (3, 'Tastiera Meccanica', 'Accessori', 3, 79.90, '2024-01-15'),
+    (4, 'Monitor 27 Pollici', 'Elettronica', 1, 249.00, '2024-01-18'),
+    (5, 'Scrivania Regolabile', 'Arredamento', 1, 350.00, '2024-01-20'),
+    (6, 'Sedia Ergonomica', 'Arredamento', 2, 189.90, '2024-01-22'),
+    (7, 'Cuffie Bluetooth', 'Audio', 4, 59.99, '2024-01-25'),
+    (8, 'Soundbar TV', 'Audio', 2, 149.00, '2024-02-01'),
+    (9, 'Smartphone 5G', 'Elettronica', 3, 799.00, '2024-02-03'),
+    (10, 'Cover Protettiva', 'Accessori', 10, 12.99, '2024-02-05'),
+    (11, 'Lampada LED Smart', 'Arredamento', 6, 29.90, '2024-02-08'),
+    (12, 'Webcam HD', 'Accessori', 3, 45.00, '2024-02-10'),
+    (13, 'Cassa Portatile', 'Audio', 5, 39.50, '2024-02-14'),
+    (14, 'Tablet 10 Pollici', 'Elettronica', 2, 329.00, '2024-02-17'),
+    (15, 'Supporto Monitor', 'Accessori', 4, 34.90, '2024-02-20'),
+    (16, 'Libreria Modulare', 'Arredamento', 1, 120.00, '2024-02-22'),
+    (17, 'Auricolari TWS', 'Audio', 8, 29.99, '2024-02-25'),
+    (18, 'Zaino Porta PC', 'Accessori', 3, 49.90, '2024-02-27'),
+    (19, 'Stampante Multifunzione', 'Elettronica', 1, 159.00, '2024-03-01'),
+    (20, 'Microfono USB', 'Audio', 2, 85.00, '2024-03-05');
 -- 1. Totale vendite per categoria (quanti scontrini staccati per ogni reparto)
 SELECT categoria, COUNT(*) AS TotaleVendite
 FROM Vendite
@@ -326,174 +153,28 @@ CREATE TABLE Clienti (
 
 -- Inserimento di 20 record
 INSERT INTO
-    Clienti (
-        id,
-        nome,
-        cognome,
-        email,
-        eta,
-        citta
-    )
-VALUES (
-        1,
-        'Alessandro',
-        'Rossi',
-        'alessandro.rossi@gmail.com',
-        34,
-        'Roma'
-    ),
-    (
-        2,
-        'Anna',
-        'Verdi',
-        'anna.verdi@yahoo.it',
-        28,
-        'Milano'
-    ),
-    (
-        3,
-        'Marco',
-        'Bianchi',
-        'marco.b@gmail.com',
-        40,
-        'Torino'
-    ),
-    (
-        4,
-        'Andrea',
-        'Conti',
-        'andrea.conti@outlook.com',
-        22,
-        'Genova'
-    ),
-    (
-        5,
-        'Giulia',
-        'Russo',
-        'giulia.russo@gmail.com',
-        31,
-        'Napoli'
-    ),
-    (
-        6,
-        'Antonio',
-        'Gallo',
-        'antonio.g@libero.it',
-        45,
-        'Roma Termini'
-    ),
-    (
-        7,
-        'Beatrice',
-        'Fonti',
-        'beatrice.f@gmail.com',
-        38,
-        'Bologna'
-    ),
-    (
-        8,
-        'Alberto',
-        'Costa',
-        'alberto.costa@gmail.com',
-        52,
-        'Verona'
-    ),
-    (
-        9,
-        'Chiara',
-        'Serra',
-        'chiara.serra@gmail.com',
-        30,
-        'Firenze'
-    ),
-    (
-        10,
-        'Davide',
-        'Greco',
-        'davide.greco@hotmail.com',
-        29,
-        'San Romano'
-    ),
-    (
-        11,
-        'Alice',
-        'Mazza',
-        'alice.mazza@gmail.com',
-        36,
-        'Palermo'
-    ),
-    (
-        12,
-        'Federico',
-        'Villa',
-        'federico.v@gmail.com',
-        41,
-        'Catania'
-    ),
-    (
-        13,
-        'Alessia',
-        'Piras',
-        'alessia.piras@tiscali.it',
-        25,
-        'Cagliari'
-    ),
-    (
-        14,
-        'Lorenzo',
-        'Ferri',
-        'lorenzo.ferri@gmail.com',
-        39,
-        'Bari'
-    ),
-    (
-        15,
-        'Matteo',
-        'Rinaldi',
-        'matteo.r@gmail.com',
-        33,
-        'ROMA'
-    ),
-    (
-        16,
-        'Angelo',
-        'Leone',
-        'angelo.leone@outlook.it',
-        48,
-        'Venezia'
-    ),
-    (
-        17,
-        'Sara',
-        'Longo',
-        'sara.longo@gmail.com',
-        27,
-        'Trieste'
-    ),
-    (
-        18,
-        'Arturo',
-        'Parodi',
-        'arturo.p@gmail.com',
-        35,
-        'Romagnano al Monte'
-    ),
-    (
-        19,
-        'Elena',
-        'Monti',
-        'elena.monti@virgilio.it',
-        37,
-        'Perugia'
-    ),
-    (
-        20,
-        'Adriano',
-        'Testa',
-        'adriano.testa@gmail.com',
-        30,
-        'Ancona'
-    );
+    Clienti (id, nome, cognome, email, eta, citta)
+VALUES (1, 'Alessandro', 'Rossi', 'alessandro.rossi@gmail.com', 34, 'Roma'),
+    (2, 'Anna', 'Verdi', 'anna.verdi@yahoo.it', 28, 'Milano'),
+    (3, 'Marco', 'Bianchi', 'marco.b@gmail.com', 40, 'Torino'),
+    (4, 'Andrea', 'Conti', 'andrea.conti@outlook.com', 22, 'Genova'),
+    (5, 'Giulia', 'Russo', 'giulia.russo@gmail.com', 31, 'Napoli'),
+    (6, 'Antonio', 'Gallo', 'antonio.g@libero.it', 45, 'Roma Termini'),
+    (7, 'Beatrice', 'Fonti', 'beatrice.f@gmail.com', 38, 'Bologna'),
+    (8, 'Alberto', 'Costa', 'alberto.costa@gmail.com', 52, 'Verona'),
+    (9, 'Chiara', 'Serra', 'chiara.serra@gmail.com', 30, 'Firenze'),
+    (10, 'Davide', 'Greco', 'davide.greco@hotmail.com', 29, 'San Romano'),
+    (11, 'Alice', 'Mazza', 'alice.mazza@gmail.com', 36, 'Palermo'),
+    (12, 'Federico', 'Villa', 'federico.v@gmail.com', 41, 'Catania'),
+    (13, 'Alessia', 'Piras', 'alessia.piras@tiscali.it', 25, 'Cagliari'),
+    (14, 'Lorenzo', 'Ferri', 'lorenzo.ferri@gmail.com', 39, 'Bari'),
+    (15, 'Matteo', 'Rinaldi', 'matteo.r@gmail.com', 33, 'ROMA'),
+    (16, 'Angelo', 'Leone', 'angelo.leone@outlook.it', 48, 'Venezia'),
+    (17, 'Sara', 'Longo', 'sara.longo@gmail.com', 27, 'Trieste'),
+    (18, 'Arturo', 'Parodi', 'arturo.p@gmail.com', 35, 'Romagnano al Monte'),
+    (19, 'Elena', 'Monti', 'elena.monti@virgilio.it', 37, 'Perugia'),
+    (20, 'Adriano', 'Testa', 'adriano.testa@gmail.com', 30, 'Ancona');
+
 -- 1. Clienti con email su dominio Gmail (@gmail.com)
 SELECT * FROM Clienti WHERE email LIKE '%@gmail.com';
 
@@ -571,132 +252,27 @@ VALUES ('1', 'Mario', 'Roma'),
     ('20', 'Laura', 'Firenze');
 
 INSERT INTO
-    Ordini (
-        id,
-        id_cliente,
-        data_ordine,
-        importo
-    )
-VALUES (
-        '1',
-        '1',
-        '2024-01-15',
-        100.00
-    ),
-    (
-        '2',
-        '2',
-        '2024-01-15',
-        200.00
-    ),
-    (
-        '3',
-        '3',
-        '2024-01-15',
-        300.00
-    ),
-    (
-        '4',
-        '4',
-        '2024-01-15',
-        400.00
-    ),
-    (
-        '5',
-        '5',
-        '2024-01-15',
-        500.00
-    ),
-    (
-        '6',
-        '6',
-        '2024-01-15',
-        600.00
-    ),
-    (
-        '7',
-        '7',
-        '2024-01-15',
-        700.00
-    ),
-    (
-        '8',
-        '8',
-        '2024-01-15',
-        800.00
-    ),
-    (
-        '9',
-        '9',
-        '2024-01-15',
-        900.00
-    ),
-    (
-        '10',
-        '10',
-        '2024-01-15',
-        1000.00
-    ),
-    (
-        '11',
-        '11',
-        '2024-01-15',
-        1100.00
-    ),
-    (
-        '12',
-        '12',
-        '2024-01-15',
-        1200.00
-    ),
-    (
-        '13',
-        '13',
-        '2024-01-15',
-        1300.00
-    ),
-    (
-        '14',
-        '14',
-        '2024-01-15',
-        1400.00
-    ),
-    (
-        '15',
-        '15',
-        '2024-01-15',
-        1500.00
-    ),
-    (
-        '16',
-        '16',
-        '2024-01-15',
-        1600.00
-    ),
-    (
-        '17',
-        '17',
-        '2024-01-15',
-        1700.00
-    ),
-    (
-        '18',
-        '18',
-        '2024-01-15',
-        1800.00
-    ),
-    (
-        '19',
-        '19',
-        '2024-01-15',
-        1900.00
-    ),
-    (
-        '20',
-        '20',
-        '2024-01-15',
-        2000.00
-    );
+    Ordini (id, id_cliente, data_ordine, importo)
+VALUES ('1', '1', '2024-01-15', 100.00),
+    ('2', '2', '2024-01-15', 200.00),
+    ('3', '3', '2024-01-15', 300.00),
+    ('4', '4', '2024-01-15', 400.00),
+    ('5', '5', '2024-01-15', 500.00),
+    ('6', '6', '2024-01-15', 600.00),
+    ('7', '7', '2024-01-15', 700.00),
+    ('8', '8', '2024-01-15', 800.00),
+    ('9', '9', '2024-01-15', 900.00),
+    ('10', '10', '2024-01-15', 1000.00),
+    ('11', '11', '2024-01-15', 1100.00),
+    ('12', '12', '2024-01-15', 1200.00),
+    ('13', '13', '2024-01-15', 1300.00),
+    ('14', '14', '2024-01-15', 1400.00),
+    ('15', '15', '2024-01-15', 1500.00),
+    ('16', '16', '2024-01-15', 1600.00),
+    ('17', '17', '2024-01-15', 1700.00),
+    ('18', '18', '2024-01-15', 1800.00),
+    ('19', '19', '2024-01-15', 1900.00),
+    ('20', '20', '2024-01-15', 2000.00);
 
 -- 1. Clienti Attivi (INNER JOIN + GROUP BY): chi ha speso e quanto
 SELECT
@@ -723,5 +299,3 @@ FROM Clienti_Ordini c
     RIGHT JOIN Ordini o ON c.id = o.id_cliente
 WHERE
     c.id IS NULL;
-
---
