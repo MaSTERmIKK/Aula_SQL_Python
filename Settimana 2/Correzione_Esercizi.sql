@@ -723,3 +723,5 @@ FROM Clienti_Ordini c
     RIGHT JOIN Ordini o ON c.id = o.id_cliente
 WHERE
     c.id IS NULL;
+
+--
